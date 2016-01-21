@@ -1,1 +1,2 @@
-SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://username:password@host/database'
+SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://shortener:123456@localhost/shortener'
+SQLALCHEMY_ECHO = True
