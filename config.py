@@ -1,6 +1,7 @@
 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://shortener:123456@localhost/shortener'
 SQLALCHEMY_ECHO = True
 SQLALCHEMY_TRACK_MODIFICATIONS = True
-WTF_CSRF_ENABLED = True
-WTF_CSRF_SECRET_KEY = "somethingimpossibletoguess"
+CSRF_ENABLED = True
+SECRET_KEY = "xckdfuhaskdhihnlqkCDHKLruqILH"
 DEBUG = True
+SERVER_NAME = '127.0.0.1:5000'
