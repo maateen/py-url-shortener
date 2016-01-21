@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{url_for('static', filename='favicon.ico')}}">
+
+    <title>Py URL Shortener</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='css/custom.min.css')}}" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+
+    <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Py URL Shortener</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li class="active"><a href="#">It's free and ALWAYS WILL BE!</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover">
+            <h1 class="cover-heading">SHORTEN. SHARE. MEASURE.</h1>
+            <form class="lead" action="{{url_for('home')}}" method="POST" accept-charset="utf-8">
+            	{{ form.hidden_tag() }}
+            	<div class="form-group {% if form.url.errors %} has-error {% endif %}">
+            		{{ form.url(placeholder="Paste a link to shorten it", class="form-control") }}
+            	</div>
+            	<p class="lead">
+            		<input type="submit" name="submit" value="SHORTEN" class="btn btn-lg btn-default">
+            	</p>
+            </form>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Developed by <a href="http://www.ugcoder.com/">Maksudur Rahman Maateen</a>, Core template designed by <a href="https://twitter.com/mdo">Mark Otto</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+  </body>
+</html>
