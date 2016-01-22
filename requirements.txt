@@ -1,5 +1,6 @@
 Flask == 0.10.1
 flask-sqlalchemy == 2.1
 Flask-WTF == 0.12
+Flask_RESTful == 0.3.5
 pymysql == 0.6.7
 markupsafe == 0.23
