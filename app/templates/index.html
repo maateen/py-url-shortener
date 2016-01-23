@@ -45,20 +45,51 @@
 
           <div class="inner cover">
             <h1 class="cover-heading">SHORTEN. SHARE. MEASURE.</h1>
+            {# Start message part. This part wil be triggered only when there is some messages to show.#}
+            {%with messages = get_flashed_messages()%}
+            	{% if messages %}
+            		{% for message in messages %}
+		            	<div class="alert alert-danger alert-dismissible" role="alert">
+		  					<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+		  					<p><span class="glyphicon glyphicon-alert" aria-hidden="true"></span><strong> Warning!</strong> {{message}}</p>
+						</div>
+					{% endfor %}
+            	{% endif %}
+            {% endwith %}
+            {# End message part.#}
             <form class="lead" action="{{url_for('home')}}" method="POST" accept-charset="utf-8">
             	{{ form.hidden_tag() }}
-            	<div class="form-group {% if form.url.errors %} has-error {% endif %}">
-            		{{ form.url(placeholder="Paste a link to shorten it", class="form-control") }}
+            	<div class="form-group {% if form.long_url.errors %} has-error {% endif %}">
+            		{{ form.long_url(placeholder="Paste a link to shorten it", class="form-control") }}
             	</div>
             	<p class="lead">
             		<input type="submit" name="submit" value="SHORTEN" class="btn btn-lg btn-default">
             	</p>
             </form>
           </div>
+          <div class="row">
+			<div class="col-sm-2">
+		    </div>
+	        <div class="col-sm-8">
+	        	{# Start short URL part. This part wil be triggered only when there is a generated short URL to show.#}
+	            {%if short_url%}
+	            <div class="input-group  input-group-lg">
+	  				<input type="url" class="form-control" value="{{short_url}}" id="clipboard" >
+	  				<span class="input-group-btn">
+	  				<button class="btn btn-success" type="button" data-clipboard-target="#clipboard"><span id="clipboard" class="glyphicon glyphicon-copy" aria-hidden="true"></span> Copy!</button>
+	  				</span>
+				</div>
+				{%endif%}
+				{# End short URL part.#}
+			</div>
+			<div class="col-sm-2">
+		    </div>
+		    </div>
 
           <div class="mastfoot">
-            <div class="inner">
-              <p>Developed by <a href="http://www.ugcoder.com/">Maksudur Rahman Maateen</a>, Core template designed by <a href="https://twitter.com/mdo">Mark Otto</a>.</p>
+          	<div class="inner">
+            	<center><h4>{{number}} Links Shortened Worldwide</h4></center>
+              	<p>Developed by <a href="http://www.ugcoder.com/">Maksudur Rahman Maateen</a>, Core template designed by <a href="https://twitter.com/mdo">Mark Otto</a>.</p>
             </div>
           </div>
 
@@ -73,5 +104,9 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="{{url_for('static', filename='js/jquery.min.js')}}"></script>
     <script src="{{url_for('static', filename='js/bootstrap.min.js')}}"></script>
+
+    <!--Clipboard JavaScript-->
+    <script src="{{url_for('static', filename='js/clipboard.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/custom.min.js')}}"></script>
   </body>
 </html>
