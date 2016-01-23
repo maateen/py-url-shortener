@@ -62,7 +62,7 @@ def api(version):
     # version, if not matches, then it throws a 403 error message. If matched,
     # then it triggers the equivalent api function.
 
-    if version == 'v1.0' and not request.json or not 'title' in request.json:
+    if version == 'v1.0' and not request.json:
         long_url = request.get_json().get('long_url')
         info = apiv10(long_url)
         return jsonify(info)
