@@ -10,7 +10,7 @@ def apiv10(long_url):
     checker = url_checker(long_url)
     if checker is True:
         short_url = short_url_generator(long_url)
-        return {'short_url': short_url}
+        return {'state' : 'ok', 'long_url' : long_url, 'short_url' : short_url, 'message' : ''}
     else:
         error = "The URL seems to be dead at this moment."
-        return {'error': error}
+        return {'state' : 'error', 'long_url' : long_url, 'short_url' : '', 'message' : error}
