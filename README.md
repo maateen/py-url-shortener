@@ -2,7 +2,7 @@
 
 **Py-URL-Shortener** is a Python powered Flask app implementing a technique in which a Uniform Resource Locator (URL) has been made substantially shorter in length and still direct to the required page. This is achieved by using a redirect on a domain name that is short, which links to the web page that has a long URL.
 
-**Demo:** https://github.com/ugcoder/Py-URL-Shortener/wiki/Screenshots
+**Project Homepage:** http://ugcoder.github.io/Py-URL-Shortener/
 #What have been used?
 
 - **Python3:** Yah! It's high time we should use Python3 instead of Python2 and I have started the journey already.
