@@ -2,9 +2,8 @@
 
 **Py-URL-Shortener** is a Python powered Flask app implementing a technique in which a Uniform Resource Locator (URL) has been made substantially shorter in length and still direct to the required page. This is achieved by using a redirect on a domain name that is short, which links to the web page that has a long URL.
 
-**Project Homepage:** http://ugcoder.github.io/Py-URL-Shortener/
+**Project Homepage:** http://lab.maateen.me/py-url-shortener/
 
-**Live Preview:** http://s.ugcoder.com/
 #What have been used?
 
 - **Python3:** Yah! It's high time we should use Python3 instead of Python2 and I have started the journey already.
@@ -25,14 +24,14 @@
 
 #User’s Guide
 
-- [Requirements](https://github.com/ugcoder/Py-URL-Shortener/wiki/Requirements)
+- [Requirements](https://github.com/maateen/Py-URL-Shortener/wiki/Requirements)
 
-- [Installation](https://github.com/ugcoder/Py-URL-Shortener/wiki/Installation) 
+- [Installation](https://github.com/maateenu/Py-URL-Shortener/wiki/Installation) 
 
-- [Configuration](https://github.com/ugcoder/Py-URL-Shortener/wiki/Configuration) 
+- [Configuration](https://github.com/maateen/Py-URL-Shortener/wiki/Configuration) 
 
-- [Screenshots](https://github.com/ugcoder/Py-URL-Shortener/wiki/Screenshots)
+- [Screenshots](https://github.com/maateen/Py-URL-Shortener/wiki/Screenshots)
 
-- [API](https://github.com/ugcoder/Py-URL-Shortener/wiki/API) 
+- [API](https://github.com/maateen/Py-URL-Shortener/wiki/API) 
 
-- [Deployment](https://github.com/ugcoder/Py-URL-Shortener/wiki/Deployment) 
+- [Deployment](https://github.com/maateen/Py-URL-Shortener/wiki/Deployment) 
