@@ -18,11 +18,11 @@
 
 - **MarkupSafe:** MarkupSafe is a library for Python that implements a unicode string that is aware of HTML escaping rules and can be used to implement automatic string escaping. It is used by [Jinja 2](jinja.pocoo.org), the [Mako](http://www.makotemplates.org/) templating engine, the [Pylons](http://pylonshq.com/) web framework and many more.
 
-#Database
+# Database
 
 **Py-URL-Shortener** is tested with [MariaDB](https://mariadb.org/) and obviously can be used with [MySQL](https://www.mysql.com/). And as we are using [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.1/), you can combine it with any database system supported by [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org/2.1/).
 
-#User’s Guide
+# User’s Guide
 
 - [Requirements](https://github.com/maateen/Py-URL-Shortener/wiki/Requirements)
 
